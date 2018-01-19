@@ -1,3 +1,5 @@
+#Elly Labay 1/17/18 Takes a given string and prints the string backwards
+
 def reverse(astring):
     r_string = ""
     num = len(astring)
