@@ -1,6 +1,7 @@
+# Elly Labay 1/25/18 L-systems drawing with turtles
 import turtle
 
-def createLSystem13(numIters,axiom):
+def LSystem13(numIters, axiom):
     startString = axiom
     endString = ""
     for i in range(numIters):
@@ -9,7 +10,7 @@ def createLSystem13(numIters,axiom):
 
     return endString
 
-def createLSystem14(numIters,axiom):
+def LSystem14(numIters, axiom):
    # print("createLSystem14 check")
     startString = axiom
     endString = ""
@@ -19,7 +20,7 @@ def createLSystem14(numIters,axiom):
 
     return endString
 
-def createLSystem17(numIters,axiom):
+def LSystem17(numIters, axiom):
    # print("createLSystem14 check")
     startString = axiom
     endString = ""
@@ -32,7 +33,7 @@ def createLSystem17(numIters,axiom):
 def processString13(oldStr):
     newstr = ""
     for ch in oldStr:
-        newstr = newstr + applyRules13(ch)
+        newstr = newstr + Rules13(ch)
 
     return newstr
 
@@ -40,7 +41,7 @@ def processString14(oldStr):
    # print("ProcessString14 check")
     newstr = ""
     for ch in oldStr:
-        newstr = newstr + applyRules14(ch)
+        newstr = newstr + Rules14(ch)
 
     return newstr
 
@@ -48,11 +49,11 @@ def processString17(oldStr):
    # print("ProcessString14 check")
     newstr = ""
     for ch in oldStr:
-        newstr = newstr + applyRules17(ch)
+        newstr = newstr + Rules17(ch)
 
     return newstr
 
-def applyRules13(ch):
+def Rules13(ch):
     newstr = ""
     if ch == 'L':
         newstr = '+RF-LFL-FR+'   # Rule 1
@@ -63,7 +64,7 @@ def applyRules13(ch):
 
     return newstr
 
-def applyRules14(ch):
+def Rules14(ch):
    # print("applyRules14 check")
     newstr = ""
     if ch == 'X':
@@ -76,7 +77,7 @@ def applyRules14(ch):
 
     return newstr
 
-def applyRules17(ch):
+def Rules17(ch):
    # print("applyRules14 check")
     newstr = ""
     if ch == 'F':
@@ -123,6 +124,7 @@ def drawLsystem17(aTurtle, instructions, angle, distance):
             aTurtle.right(angle)
         elif cmd == '-':
             aTurtle.left(angle)
+
 def draw_image(t, inst, angle, length, wn):
         t.up()
         t.back(200)
@@ -137,20 +139,20 @@ def main():
     fin = turtle.Turtle() # creates the turtle
 
 #13
-    inst = createLSystem13(4, "R")   # create the string
-    print(inst)
-    draw_image(fin,inst, 90, 5, wn)
+   # inst = LSystem13(4, "R")   # create the string
+   # print(inst)
+    #draw_image(fin,inst, 90, 5, wn)
 
 #14
     print(333)
-    inst = createLSystem14(10, "X")   # create the string
+    inst = LSystem14(10, "X")   # create the string
     print(inst)
 
     draw_image(fin,inst, 90, 5, wn)
 
 #17
     print(333)
-    inst = createLSystem17(4, "FXF--FF--FF")   # create the string
+    inst = LSystem17(4, "FXF--FF--FF")   # create the string
     print(inst)
     draw_image (fin, inst, 60, 5, wn)
 
