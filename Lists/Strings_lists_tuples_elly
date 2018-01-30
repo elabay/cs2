@@ -1,0 +1,9 @@
+Describe the role of strings, lists, and tuples in programming. Why might you use one or the other?
+What unique features does each sequence type have?
+
+In both a list and a tuple, they are made up of elements which can range from other lists and tuples, strings, even
+integers. They differ in that a list is created with square brackets [ ] and can be changed throughout the code while
+a tuple uses parentheses ( ) and is not alterable. It might seem that a tuples inability to change would be a
+hindrance, and at times it is vital to change so you use a list, but within a complicated code you might not want your
+'list' to change. A string is similar to lists and tuples because they are all compond data types, however, a string is
+formed by smaller strings each broken done to a character. A string is most often used for displaying text to the user.
