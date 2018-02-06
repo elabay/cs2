@@ -118,7 +118,7 @@ def drawLsystem17(aTurtle, instructions, angle, distance):
     for cmd in instructions:
         if cmd == 'F':
             aTurtle.forward(distance)
-        elif cmd == 'B':
+        elif cmd == 'X':
             aTurtle.backward(distance)
         elif cmd == '+':
             aTurtle.right(angle)

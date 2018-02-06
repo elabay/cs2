@@ -16,7 +16,7 @@ def main():
     data = file.read()
     #print(data)
    # print(replace('I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!', "om", "am"))
-    print(replace(data, "i", "I"))
+    #print(replace(data, "i", "I"))
     print(replace(data, "a", "AA"))
 
 main()
