@@ -4,11 +4,12 @@ import string
 
 def clean(text): # Clean the data making it all lowercase and taking out all punctuation
     Alph = string.ascii_lowercase
-    new_string= ""
+    space = string.whitespace
+    new_string =""
     for char in text:
         if char in Alph:
             new_string+= char
-    newlo_string = new_string.lower()
+    newlo_string =new_string.lower()
     return newlo_string
 
 def countAll(data):
