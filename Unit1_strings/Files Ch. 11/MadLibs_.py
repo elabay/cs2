@@ -1,7 +1,7 @@
 #Elly Labay 2/2/18
-import time
 
-def mad_lists(data,partofspeech):
+
+def mad_lists(data, partofspeech):
     #print(data)
     p_num = len(partofspeech)
     completed = ""
@@ -31,37 +31,14 @@ def mad_dic(data, partofspeech):
     for i in partofspeech:
         user = input(i)
         dic[i] = user
-    #print(dic)
     for word in line:
         if word in dic:
-            #print (dic[word])
-           # print [word]
             place = line.index(word)
             line.insert(place, dic[word])
-            #line[place] = dic[word]
-           # print(line[word])
-           # print(word)
-            print(word)
         else:
-            print(9435678)
-            time.sleep(5)
             None
-
-
     final = " ".join(line)
-    print(final)
-
-def d_mad(data, partofspeech):
-    dic ={}
-    for i in partofspeech:
-        user = input(i)
-        dic[i] = user
-
-
-    return
-
-
-
+    return(final)
 
 
 
@@ -74,8 +51,8 @@ def main():
     test = test_file.read()
     #print(mad_temp)
 
-    #print(mad_lists(mad_temp,parts))
-    print(mad_dic(mad_temp, parts))
+    print(mad_lists(mad_temp,parts))
+   # print(mad_dic(mad_temp, parts))
    # print(mad_dic(test))
 
    # print( d_mad(mad_temp, parts))

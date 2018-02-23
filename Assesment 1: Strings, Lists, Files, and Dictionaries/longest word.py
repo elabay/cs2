@@ -11,7 +11,7 @@ def longest(data):
     longest_num = max(v_list)
     place = v_list.index(longest_num)
     word = k_list[place]
-    return word
+    return word, longest_num
 
 
 
@@ -21,7 +21,9 @@ def longest(data):
 def main():
     file = open("science daily", "r")
     text = file.read()
-    print(longest("hi my name is"))
+    #print(longest("hi my name is"))
+    print(longest(text))
+
 
 main()
 

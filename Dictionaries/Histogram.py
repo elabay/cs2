@@ -35,6 +35,8 @@ def sorted_dict(old_dic, list):
            # print(value)
             new_dic[letter] = value
     return new_dic
+
+
 def barChart(t, value, letter):
     t.pensize(3)
    # t.speed (0)

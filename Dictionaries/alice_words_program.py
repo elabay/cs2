@@ -55,7 +55,7 @@ def main():
     final_d = sorted_dictionary(dictionary_unsorted,list_sorted )
     #print(final_d)
 
-   # print(word_finder(final_d))
+    print(word_finder(final_d))
    # text.close()
     new_file = open("alice_words","w")
     for k in final_d:
