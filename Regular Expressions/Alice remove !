@@ -1,24 +1,16 @@
 #Elly Labay 2/23/18
 import re
+
 def remove(text):
+    list = ""
     for line in text:
-        for char in line:
-            if re.search('$!', char):
-                del char
-    return text
-
-
-
-
-
-
-
-
-
+        line = line.rstrip()
+        if re.search('^The', line):
+            print(line)
 
 def main():
     #file = open("test Text file_Guillotine", "r")
     file = open("Alice in Wonderland", "r")
     text = file.read()
-    remove('hello world! My name is elly!')
+    print(remove(text))
 main()
