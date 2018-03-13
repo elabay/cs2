@@ -44,22 +44,32 @@ def word_finder(dictionary):
 
 def main():
     #file = open("test Text file_Guillotine", "r")
+   # try:
+        #file = open("Alice in Wonderland", "r")
+        #try:
+            #file.write("This file should no be empty")
+        #finally:
+          #  file.close()
+  #  except IOError:
+     #   print( "Error: your file does not exist or it can't be opened for output.")
     file = open("Alice in Wonderland", "r")
     text = file.read()
-
 
     cleaned_text = clean(text)
 
     dictionary_unsorted= count_words(cleaned_text)
-    list_sorted = sorted(dictionary_unsorted)
-    final_d = sorted_dictionary(dictionary_unsorted,list_sorted )
+    #list_sorted = sorted(dictionary_unsorted)
+   # final_d = sorted_dictionary(dictionary_unsorted,list_sorted )
     #print(final_d)
 
-    print(word_finder(final_d))
+   # print(word_finder(final_d))
    # text.close()
-    new_file = open("alice_words","w")
-    for k in final_d:
-        new_file.write("{0}:{1}".format(k, final_d[k])+ '\n')
+    #new_file = open("alice_words","w")
+    #for k in final_d:
+        #new_file.write("{0}:{1}".format(k, final_d[k])+ '\n')
+    print(dictionary_unsorted)
+
+
 
 
 main()

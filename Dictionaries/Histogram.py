@@ -46,7 +46,7 @@ def barChart(t, value, letter):
     t.forward(value)
     t.right(90)
     t.forward(20)
-    t.write(str(value), align="left", font = ("Arial", 20, "normal"))
+    t.write(str(value), align="left", font = ("Arial", 13, "normal"))
     t.forward(30)
     t.right(90)
     t.forward(value)
@@ -57,12 +57,14 @@ def barChart(t, value, letter):
     t.write(str(letter), align="left", font = ("Arial", 20, "normal"))
     t.forward(25)
     t.pendown()
+    t.forward(30)
+
 
 def main():
     wn = turtle.Screen()
     fin = turtle.Turtle()
     fin.shape("turtle")
-    file = open("Test Text file_Guillotine", "r")
+    file = open("Alice in Wonderland", "r")
     text_file = file.read()
     diction = countAll(clean(text_file))
     list = sort_list(countAll(clean(text_file)))
@@ -72,10 +74,11 @@ def main():
     largest_data = max(data_num)
     data_points = len(data_num)
 
-    border = 15
-    wn.setworldcoordinates(0-border, 0-border, 50*data_points+border, largest_data+border)
+    border = 25
+    wn.setworldcoordinates(0-border, 0-border, 50*data_points+border, largest_data+border+30)
 
     for i in data:
        # print (i, data[i])
         barChart(fin, data[i], i)
+
 main()
