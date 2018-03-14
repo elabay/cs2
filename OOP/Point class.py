@@ -24,7 +24,13 @@ class Point:
         return "(" + str(new_x)+ "," + str(new_y) + ")"
 
     def get_line_to(self, other):
+        slope = (self.y - other.y) / (self.x - other.x)
+        b = self.y - (slope * self.x)
+        return "y = " + str(slope) +"x + " + str(b)
 
+    def move (self, dx, dy):
+        self.x = self.x + dx
+        self.y = self.y + dy
 
 
     def __str__(self):
@@ -40,5 +46,9 @@ dis = p.distance_to_point(other)
 
 #print(dis)
 
-print (other.reflect_x())
+#print (other.reflect_x())
+
+#print(Point(4,11).get_line_to(Point(6,15)))
+p.move(7, 10)
+print(p)
 
