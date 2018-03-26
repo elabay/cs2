@@ -815,7 +815,7 @@ class Entry(GraphicsObject):
     def getText(self):
         return self.text.get()
 
-    def _move(self, dx, dy):
+    def move(self, dx, dy):
         self.anchor.move(dx,dy)
 
     def getAnchor(self):

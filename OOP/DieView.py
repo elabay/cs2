@@ -1,4 +1,10 @@
 
+from graphics import *
+from graphics import Circle
+from graphics import Line
+from graphics import Point
+from graphics import GraphWin
+
 class dieview:
     """" DieView is a widget that displays a graphical representation of a standard six-sided die."""
 
@@ -46,10 +52,6 @@ creates a die centered at (40,50) having sides of length 20."""
         return pip
 
     def setValue(self, value):
-"Set this die to display value."
-# turn all pips off self.pip1.setFill(self.background) self.pip2.setFill(self.background) self.pip3.setFill(self.background) self.pip4.setFill(self.background) self.pip5.setFill(self.background) self.pip6.setFill(self.background) self.pip7.setFill(self.background)
-# turn correct pips on if value == 1:
-            self.pip4.setFill(self.foreground)
         elif value == 2:
             self.pip1.setFill(self.foreground)
             self.pip7.setFill(self.foreground)

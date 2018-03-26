@@ -28,11 +28,26 @@ class Face:
         self.mouth = Line(p1,p2)
         self.mouth.draw(window)
 
+    def Move(self, dx, dy):
+        for p in self.points:
+            p.Move(dx,dy)
+
+    def Flinch (self, center, size, window):
+        eyesize = 0.15 * size
+        eyeOff = size / 3.0
+        self.leftEye = Line(Point(center.x + eyesize/2, center.y), Point(center.x - eyesize/2, center.y))
+        self.leftEye.move(-eyeOff, -eyeOff)
+        self.rightEye = Circle(center, eyesize)
+        self.rightEye.move(eyeOff, -eyeOff)
+        self.leftEye.draw(window)
+        self.rightEye.draw(window)
+
+
 
 def main():
     win = GraphWin("Face", 500, 500)
     Face(win, Point(50,50), 30)
-    move(0,0)
 
-
-main()
+stay =1
+while stay == 1:
+    main()
