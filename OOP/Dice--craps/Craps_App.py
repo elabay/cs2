@@ -13,17 +13,21 @@ class CrapsApp:
         self.interface.close()
 
     def playRound(self):
-        goal = self.doRolls()
+        self.doRolls()
+        result, score = self.dice.score()
+        self.interface.show_result(result, score)
+
+
+
+    def doRolls(self):
+        print(self.dice.rollAll())
+        goal = self.dice.values()
         if goal == 7:
            print ("win")
         elif goal == 2:
             print ("lose")
         else:
             return goal
-
-    def doRolls(self):
-        print(self.dice.rollAll())
-
 
 
 
