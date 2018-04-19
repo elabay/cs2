@@ -48,6 +48,5 @@ def main():
     win = GraphWin("Face", 500, 500)
     Face(win, Point(50,50), 30)
 
-stay =1
-while stay == 1:
-    main()
+
+main()

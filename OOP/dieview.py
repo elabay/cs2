@@ -5,7 +5,7 @@ from graphics import Line
 from graphics import Point
 from graphics import GraphWin
 
-class dieview:
+class DieView:
     """" DieView is a widget that displays a graphical representation of a standard six-sided die."""
 
 
@@ -15,8 +15,8 @@ creates a die centered at (40,50) having sides of length 20."""
 
 # first define some standard values
 
-        self.win = win s
-        elf.background = "white"
+        self.win = win
+        self.background = "white"
         self.foreground = "black"
         self.psize = 0.1 * size
         hsize = size / 2.0
@@ -44,7 +44,7 @@ creates a die centered at (40,50) having sides of length 20."""
         self.setValue(1)
 
     def __makePip(self, x, y):
-"Internal helper method to draw a pip at (x,y)"
+        "Internal helper method to draw a pip at (x,y)"
         pip = Circle(Point(x,y),self.psize)
         pip.setFill(self.background)
         pip.setOutline(self.background)
@@ -52,7 +52,7 @@ creates a die centered at (40,50) having sides of length 20."""
         return pip
 
     def setValue(self, value):
-        elif value == 2:
+        if value == 2:
             self.pip1.setFill(self.foreground)
             self.pip7.setFill(self.foreground)
         elif value == 3:
@@ -64,6 +64,7 @@ creates a die centered at (40,50) having sides of length 20."""
             self.pip3.setFill(self.foreground)
             self.pip5.setFill(self.foreground)
             self.pip7.setFill(self.foreground)
+
         elif value == 5:
             self.pip1.setFill(self.foreground)
             self.pip3.setFill(self.foreground)
