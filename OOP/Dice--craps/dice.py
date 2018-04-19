@@ -17,7 +17,7 @@ class Dice:
     def values(self):
         return self.dice[:]
 
-    def score_1st(self):
+    def score(self):
         goal = 0
         for value in self.dice:
             start =+ value
